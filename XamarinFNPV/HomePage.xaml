@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="XamarinFNPV.HomePage">
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+
+
+            <DatePicker x:Name="FechaEncuestax"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="25"
+                    InputTransparent="true"
+                                      
+                    />
+
+            <Label Text="ENCUESTAS" FontSize="24" 
+               HorizontalOptions="Center" 
+               TextColor="black" 
+               />
+            <Entry x:Name="NombreBrigadista"
+               Placeholder="Nombre Brigadista"/>
+            <Entry x:Name="NombreBrigada"
+               Placeholder="Nombre Brigada"/>
+
+            <Label Text="-------------------------------------------------------------------------------------" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+            <Label Text = "Con el propósito de evaluar la calidad del servicio que se brinda a los pacientes se les solicia comedidamente contestar esta encuesta, no es necesario que escriba su nombre ni su firma , luego depositela en el buzon de sugerencias." TextColor="Black" HorizontalOptions="Center" Padding="10" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Label Text="-------------------------------------------------------------------------------------" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+
+
+            <StackLayout Orientation="Vertical">
+                <Label Text=" 1) Cual fue el servicio que le prestaron en la Fundacion Nacer para Vivir IPS" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="black"/>
+                <controls:CustomRadioButton   Text="Consulta Medica Intramural" FontSize="20" />
+                <controls:CustomRadioButton  Text="Consulta de Enfermeria Extramural"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Consulta Medicina Extramural"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Consulta Odontologica Intramural"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Atencion Psicologia"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Atencion Fisioterapia"  FontSize="20"/>
+            </StackLayout>
+            <Label Text="-------------------------------------------------------------------------------------" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+            <Label Text="PORFAVOR MARQUE UNA 'X' EN LA CASILLA QUE USTED CONSIDERE" TextColor="Black" FontSize="20" />
+            <Label Text="-------------------------------------------------------------------------------------" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+            <Label Text=" 2) Considera que la atencion del Profesional que lo(a) atendio fue ?" FontSize="20" TextColor="Black"/>
+
+            <StackLayout Orientation="Horizontal">
+                <controls:CustomRadioButton  Text="Excelente"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Buena"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Regular"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Mala"  FontSize="20"/>
+            </StackLayout>
+
+
+
+
+            <Label Text=" 3) Considera que la atencion Auxiliar que lo(a) atendio fue ?" FontSize="20" TextColor="Black"/>
+
+            <StackLayout Orientation="Horizontal">
+                <controls:CustomRadioButton  Text="Excelente"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Buena"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Regular"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="Mala"  FontSize="20"/>
+            </StackLayout>
+
+
+            <Label Text=" 4) Considera que le resolvieron la situacion de salud por la cual acudioa la IPS ?" FontSize="20" TextColor="Black"/>
+            <StackLayout Orientation="Horizontal">
+                <controls:CustomRadioButton  Text="SI"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="NO"  FontSize="20"/>
+            </StackLayout>
+
+
+
+            <Label Text=" 5) Cual es su grado de satisfaccion con los servicios de la Fundacion Nacer para Vivir IPS?" FontSize="20" TextColor="Black"/>
+
+            <StackLayout Orientation="Horizontal">
+                <controls:CustomRadioButton  Text="SATISFECHO"  FontSize="20"/>
+                <controls:CustomRadioButton  Text="INSATISFECHO"  FontSize="20"/>
+            </StackLayout>
+
+            <Editor Placeholder="Comentarios y/o Observaciones" HeightRequest="100"/>
+
+            <Button x:Name="AgregarEncuesta" Text="ENVIAR ENCUESTA" HorizontalOptions="CenterAndExpand"/>
+
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
